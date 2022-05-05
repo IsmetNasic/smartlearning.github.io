@@ -2252,7 +2252,7 @@ input, select, textarea {
 	form {
 		margin: 0 0 2em 0;
 /* 		forms backgorund color */
-		background-color: #c0c0c0;
+		background-color: #d6d6d6;
 		padding: 20px;
 		border-radius: 5px;
 	}
@@ -3054,7 +3054,7 @@ input, select, textarea {
 				-ms-transition: opacity 1s ease;
 				transition: opacity 1s ease;
 /* 				image spotlight background */
-				background: #8b8787cb;
+				background: #d6d6d6;
 				content: '';
 				display: block;
 				height: 100%;
@@ -3281,7 +3281,8 @@ input, select, textarea {
 
 		/* footer background */
 		.wrapper.style1-alt {
-			background-color: #c0c0c0;
+			background-color: #d6d6d6; /* For browsers that do not support gradients */
+			background-image: linear-gradient(to right, #d6d6d6 , #FD650D 300%);
 		}
 
 		.wrapper.style2 {
@@ -3557,12 +3558,38 @@ input, select, textarea {
 		margin: 0 auto;
 	}
 
+	/* LOGO */
+	.logo{
+		width: 225px;
+		height: auto;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 9999999;
+	}
+
+	.intro-image-container{
+		width: 30%;
+		height: 100vh !important;
+		display: table-cell !important;
+	}
+
+	.intro-image-container img{
+		width: auto;
+		height: 100%;
+		filter: contrast(125%);
+		filter: drop-shadow(3px 2px 1px #6b6b6b1b);
+	}
+
 /* Sidebar */
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
 /* 		navbar background color */
-		background:  #c0c0c0;
+		/* background:  #d6d6d6; */
+
+		background-color: #d6d6d6; /* For browsers that do not support gradients */
+		background-image: linear-gradient(to right, #d6d6d6 , #FD650D 300%);
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3839,7 +3866,6 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 12800px) {
-
 			#sidebar {
 				height: 3.5em;
 				left: 0;
@@ -3942,6 +3968,14 @@ input, select, textarea {
 
 			#intro {
 				background-attachment: scroll;
+			}
+
+		}
+		@media screen and (max-width: 1280px) {
+
+			.logo{
+				width: 150px;
+				height: auto;
 			}
 
 		}

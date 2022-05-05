@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hyperspace by HTML5 UP</title>
+    <title>Smartlearning Nachhilfe</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -16,6 +16,7 @@
 	  <div class="lang-button">
 		<button onclick="changeLang()" id="LANG_BTN"></button>
 	  </div>
+    <img class="logo" src="images/logo_no_bg.png" alt="logo" data-position="25% 25%"/>
     <!-- Sidebar -->
     <section id="sidebar">
       <div class="inner">
@@ -23,7 +24,7 @@
           <ul>
             <li><a href="#intro" id="NAV_WELCOME"></a></li>
             <li><a href="#one" id="NAV_WHAT_WE_DO">Was wir machen</a></li>
-			<li><a href="#two" id="NAV_WHO_WE_ARE">Wer sind wir</a></li>
+			      <li><a href="#two" id="NAV_WHO_WE_ARE">Wer sind wir</a></li>
             <li><a href="#three" id="NAV_CONTACT">Kontaktier mich</a></li>
           </ul>
         </nav>
@@ -33,14 +34,22 @@
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Intro -->
-      <section id="intro" class="wrapper style1 fullscreen fade-up">
-        <div class="inner" style="width: 60%;">
+      <section id="intro" class="wrapper style1 fullscreen fade-up" style="display: table-row !important">
+        <div class="inner" 
+        style="
+        width: 75%; 
+        display: table-cell !important;
+        vertical-align: top;
+        ">
           <h1 id="INTRO_TEXT_BIG"></h1>
           <p id="INTRO_TEXT_SMALL">
           </p>
           <ul class="actions">
             <li><a href="#one" class="button scrolly" id="MORE_BTN"> erfahren</a></li>
           </ul>
+        </div>
+        <div class="intro-image-container">
+          <img src="images/intro.png" alt="" data-position="center center"/>
         </div>
       </section>
 
@@ -198,40 +207,61 @@
                 <li>
                   <h3 id="ABOUT_ADDRESS">Address</h3>
                   <span
-                    >63820 Elsenfeld<br />
-                    Musterstraße 1<br />
+                    >
+                    Am Stachus 2<br />
+                    63820 Elsenfeld<br />
                     Deutschland</span
                   >
                 </li>
                 <li>
                   <h3 id="ABOUT_EMAIL"></h3>
-                  <a href="#">muster-email@hotmail.com</a>
+                  <a href="#">smartlearning-nachhilfe@web.de</a>
                 </li>
                 <li>
                   <h3 id="ABOUT_PHONE"></h3>
-                  <span>(000) 000-0000</span>
+                  <span>0174 3135235</span>
+                </li>
+                <li>
+                  <h3 id="ABOUT_OPEN">Öffnungszeiten:</h3>
+                  <span>Montag: 14:00 - 17:00</span>
+                  <br/>
+                  <span>Dienstag: 14:00 - 17:00</span>
+                  <br/>
+                  <span>Mittwoch: 14:00 - 17:00</span>
+                  <br/>
+                  <span>Donnerstag: 14:00 - 17:00</span>
+                  <br/>
+                  <span>Freitag: 14:00 - 17:00</span>
+                  <hr/>
+                  <h3>Telefonische Sprechzeiten:</h3>
+                  <span>09:00 - 12:00</span>
                 </li>
                 <li>
                   <h3 id="ABOUT_SOCIAL">Social</h3>
                   <ul class="icons">
                     <li>
-                      <a href="#" class="icon brands fa-twitter"
+                      <a href="https://twitter.com/rana_ayhan" class="icon brands fa-twitter"
                         ><span class="label">Twitter</span></a
                       >
                     </li>
                     <li>
-                      <a href="#" class="icon brands fa-facebook-f"
+                      <a href="https://www.facebook.com/rana.ayhan" class="icon brands fa-facebook-f"
                         ><span class="label">Facebook</span></a
                       >
                     </li>
                     <li>
-                      <a href="#" class="icon brands fa-instagram"
+                      <a href="https://www.instagram.com/izmirana/?hl=en" class="icon brands fa-instagram"
                         ><span class="label">Instagram</span></a
                       >
                     </li>
                     <li>
-                      <a href="#" class="icon brands fa-linkedin-in"
+                      <a href="https://www.linkedin.com/in/rana-ayhan-695627b0" class="icon brands fa-linkedin-in"
                         ><span class="label">LinkedIn</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.xing.com/profile/rana_ayhan2" class="icon brands fa-xing"
+                        ><span class="label">Xing</span></a
                       >
                     </li>
                   </ul>
