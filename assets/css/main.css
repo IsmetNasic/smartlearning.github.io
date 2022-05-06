@@ -260,7 +260,7 @@ input, select, textarea {
 		font-size: 0.6em;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 880px) {
 
 		h1 {
 			font-size: 2em;
@@ -1331,7 +1331,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 880px) {
 
 			.row {
 				display: flex;
@@ -2220,7 +2220,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 880px) {
 
 			.features section {
 				padding: 2.5em 1.5em 0.1em 5.5em ;
@@ -2230,6 +2230,10 @@ input, select, textarea {
 					left: 1.5em;
 					top: 2em;
 				}
+				#MORE_BTN{
+					display: none;
+				}
+				
 
 		}
 
@@ -3007,7 +3011,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 880px) {
 
 			.split > * {
 				margin: 3em 0 0 0;
@@ -3150,7 +3154,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 880px) {
 			.lang-button button{
 				background-color: #c0c0c0;
 				border-radius: 0 0 0 20px;
@@ -3263,7 +3267,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 880px) {
 
 				.wrapper > .inner {
 					padding: 3em 2em 1em 2em ;
@@ -3333,7 +3337,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 880px) {
 
 				.wrapper.fullscreen {
 					padding: 2em 0;
@@ -3463,7 +3467,7 @@ input, select, textarea {
 							color: #ffffff;
 						}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 880px) {
 
 			#header {
 				padding: 1em 2em;
@@ -3515,7 +3519,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 880px) {
 
 			#sidebar + #wrapper {
 				padding-top: 0;
@@ -3569,14 +3573,14 @@ input, select, textarea {
 	}
 
 	.intro-image-container{
-		width: 30%;
+		width: 40%;
 		height: 100vh !important;
 		display: table-cell !important;
 	}
 
 	.intro-image-container img{
-		width: auto;
-		height: 100%;
+		width: 100%;
+		height: auto;
 		filter: contrast(125%);
 		filter: drop-shadow(3px 2px 1px #6b6b6b1b);
 	}
@@ -3926,10 +3930,23 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 880px) {
 
 			#sidebar {
 				display: none;
+			}
+			.intro-container{
+				display: table-cell !important
+			}
+			.intro-image-container{
+
+				display: table-row !important;
+				height: 50vh !important;
+			}
+		
+			.intro-image-container img{
+				margin-top: -90px !important;
+
 			}
 
 		}
@@ -3956,7 +3973,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 880px) {
 
 				#intro p {
 					font-size: 1em;
