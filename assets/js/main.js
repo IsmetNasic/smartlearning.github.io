@@ -1,21 +1,3 @@
-/* import Translator from "./translator";
-
-var translator = new Translator({
-  persist: false,
-  languages: ["de", "tr"],
-  defaultLanguage: "de",
-  detectLanguage: false,
-  filesLocation: "/i18n"
-});
-
-translator.load();
-
-document.querySelector("form").addEventListener("click", function(evt) {
-  if (evt.target.tagName === "INPUT") {
-    translator.load(evt.target.value);
-  }
-}); */
-
 
 (function ($) {
   var $window = $(window),
@@ -173,10 +155,10 @@ document.querySelector("form").addEventListener("click", function(evt) {
 // TRANSLATIONS ---------------------------------------------------------------------------------------------------------
 var languageGerman = true;
 
-document.getElementById("INTRO_TEXT_BIG").innerHTML = languageGerman? "Hi, ich bin Rana" : "Merhaba ben Rana";
+/* document.getElementById("INTRO_TEXT_BIG").innerHTML = languageGerman? "Hi, ich bin Rana" : "Merhaba ben Rana";
 document.getElementById("INTRO_TEXT_SMALL").innerHTML = languageGerman? 
 "Just another fine responsive site template designed by and released for free under the." : 
-"Tarafindan tasarlanan başka bir duyarli site şablonu altinda ücretsiz olarak yayinlandi.";
+"Tarafindan tasarlanan başka bir duyarli site şablonu altinda ücretsiz olarak yayinlandi."; */
 
 // Buttons
 document.getElementById("LANG_BTN").innerHTML = languageGerman? "Türkçe" : "Deutsch";
@@ -185,9 +167,9 @@ document.getElementById("SEND_BTN").innerHTML = languageGerman? "Nachricht schic
 
 // Nav Links
 document.getElementById("NAV_WELCOME").innerHTML = languageGerman? "wilkommen" : "Hoş geldin";
-document.getElementById("NAV_WHO_WE_ARE").innerHTML = languageGerman? "wer bin ich" : "Biz Kimiz";
-document.getElementById("NAV_WHAT_WE_DO").innerHTML = languageGerman? "was ich machen" : "ne yapiyoruz";
-document.getElementById("NAV_CONTACT").innerHTML = languageGerman? "kontaktiere mich" : "Bize Ulaşin";
+document.getElementById("NAV_WHO_WE_ARE").innerHTML = languageGerman? "Vermietung" : "kiralama";
+document.getElementById("NAV_WHAT_WE_DO").innerHTML = languageGerman? "wer ich bin" : "ben kimim";
+document.getElementById("NAV_CONTACT").innerHTML = languageGerman? "kontakt" : "İletişim";
 
 // Cards
 document.getElementById("NACHHILFE").innerHTML = languageGerman? "Nachhilfe in Deutsch/Türkisch" : "Almanca/Türkçe özel ders";
@@ -195,42 +177,51 @@ document.getElementById("NACHHILFE_TEXT").innerHTML = languageGerman?
 "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus." : 
 "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.";
 
-document.getElementById("UEBERSETZUNG").innerHTML = languageGerman? "Übersetzung Deutsch/Türkisch" : "Almanca/Türkçe çeviri";
+document.getElementById("UEBERSETZUNG").innerHTML = languageGerman? "Übersetzerin/ Dolmetscherin" : "Tercüman/ tercüman";
 document.getElementById("UEBERSETZUNG_TEXT").innerHTML = languageGerman? 
-"Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus." : 
-"Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.";
+"Übersetzerin / Dolmetscherin für die türkische Sprache" : 
+"Türk dili için tercüman / tercüman";
 
-document.getElementById("DOLMETSCHEN").innerHTML = languageGerman? "Dolmetschen Deutsch/Türkisch" : "Almanca/Türkçe Tercümanlik";
+document.getElementById("DOLMETSCHEN").innerHTML = languageGerman? "Event-Moderation/ AUTORIN" : "Etkinlik moderatörlüğü/ YAZAR";
 document.getElementById("DOLMETSCHEN_TEXT").innerHTML = languageGerman? 
 "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus." : 
 "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.";
 
 
-document.getElementById("WHAT_DO_WE_DO").innerHTML = languageGerman? "Was ich mache" : "Ne yaparim";
+document.getElementById("WHAT_DO_WE_DO").innerHTML = languageGerman? "Sie suchen einen Schulungsraum zur Miete?" : "Kiralık bir eğitim odası mı arıyorsunuz?";
 document.getElementById("WHAT_DO_WE_DO_TEXT").innerHTML = languageGerman? 
-"Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus." : 
+"Vermiete sehr geräumigen, gemütlichen, sauberen & hellen Sminarraum / Tagungsraum in Toplage Elsenfeld." 
++"</br>" + 
+"- Für ca. 20 Personen geeignet"
++"</br>" +
+"- WLAN & BEAMER sind verfügbar."
++"</br>" +
+"- Ausreichend Parkplätze vorhanden"
++"</br>" +
+"- Festgelegte Tagespauschale 99,00€"
+: 
 "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.";
 
 // Contact me
-document.getElementById("CONTACT_ME_INTRO").innerHTML = languageGerman? "Kontaktiere mich" : "Bana ulaşin";
-/* document.getElementById("CONTACT_ME_TEXT").innerHTML = languageGerman? 
-  "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem." : 
-  "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem."; */
+document.getElementById("CONTACT_ME_INTRO").innerHTML = languageGerman? "Kontakt" : "Bana ulaşin";
+document.getElementById("CONTACT_ME_TEXT").innerHTML = languageGerman? 
+  "Sie können mich gerne per E-mail oder Telefon erreichen.": 
+  "Phasellus convallis elit id ullamcorper pam sem, sit amet impet quis lorem.";
 document.getElementById("CONTACT_NAME").innerHTML = languageGerman? "Name" : "İsim";
 document.getElementById("CONTACT_EMAIL").innerHTML = languageGerman? "E-Mail" : "E-posta";
 document.getElementById("CONTACT_MESSAGE").innerHTML = languageGerman? "Nachricht" : "Haberler";
 document.getElementById("ABOUT_ADDRESS").innerHTML = languageGerman? "Adresse" : "Adres";
-document.getElementById("ABOUT_EMAIL").innerHTML = languageGerman? "E-mail" : "E-posta";
-document.getElementById("ABOUT_PHONE").innerHTML = languageGerman? "Telefon" : "Telefon";
+/* document.getElementById("ABOUT_EMAIL").innerHTML = languageGerman? "E-mail" : "E-posta";
+document.getElementById("ABOUT_PHONE").innerHTML = languageGerman? "Telefon" : "Telefon"; */
 
 
 function changeLang(){
   languageGerman = !languageGerman;
 
-  document.getElementById("INTRO_TEXT_BIG").innerHTML = languageGerman? "Hi, ich bin Rana" : "Merhaba ben Rana";
+  /* document.getElementById("INTRO_TEXT_BIG").innerHTML = languageGerman? "Hi, ich bin Rana" : "Merhaba ben Rana";
   document.getElementById("INTRO_TEXT_SMALL").innerHTML = languageGerman? 
   "Just another fine responsive site template designed by and released for free under the." : 
-  "Tarafından tasarlanan başka bir duyarli site şablonu altinda ücretsiz olarak yayinlandi.";
+  "Tarafından tasarlanan başka bir duyarli site şablonu altinda ücretsiz olarak yayinlandi."; */
 
   // Buttons
   document.getElementById("LANG_BTN").innerHTML = languageGerman? "Türkçe" : "Deutsch";
@@ -239,9 +230,9 @@ function changeLang(){
 
   // Nav Links
   document.getElementById("NAV_WELCOME").innerHTML = languageGerman? "wilkommen" : "Hoş geldin";
-  document.getElementById("NAV_WHO_WE_ARE").innerHTML = languageGerman? "wer bin ich" : "Biz Kimiz";
-  document.getElementById("NAV_WHAT_WE_DO").innerHTML = languageGerman? "was ich machen" : "ne yapiyoruz";
-  document.getElementById("NAV_CONTACT").innerHTML = languageGerman? "kontaktiere mich" : "Bize Ulaşin";
+  document.getElementById("NAV_WHO_WE_ARE").innerHTML = languageGerman? "Vermietung" : "kiralama";
+  document.getElementById("NAV_WHAT_WE_DO").innerHTML = languageGerman? "wer ich bin" : "ben kimim";
+  document.getElementById("NAV_CONTACT").innerHTML = languageGerman? "kontakt" : "İletişim";
 
   // Cards
   document.getElementById("NACHHILFE").innerHTML = languageGerman? "Nachhilfe in Deutsch/Türkisch" : "Almanca/Türkçe özel ders";
@@ -249,31 +240,35 @@ function changeLang(){
   "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus." : 
   "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.";
 
-  document.getElementById("UEBERSETZUNG").innerHTML = languageGerman? "Übersetzung Deutsch/Türkisch" : "Almanca/Türkçe çeviri";
+  document.getElementById("UEBERSETZUNG").innerHTML = languageGerman? "Übersetzerin / Dolmetscherin" : "Tercüman / tercüman";
   document.getElementById("UEBERSETZUNG_TEXT").innerHTML = languageGerman? 
-  "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus." : 
-  "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.";
+  "Übersetzerin / Dolmetscherin für die türkische Sprache" : 
+  "Türk dili için tercüman / tercüman";
 
-  document.getElementById("DOLMETSCHEN").innerHTML = languageGerman? "Dolmetschen Deutsch/Türkisch" : "Almanca/Türkçe Tercümanlik";
+  document.getElementById("DOLMETSCHEN").innerHTML = languageGerman? "Event-Moderation/ AUTORIN" : "Etkinlik moderatörlüğü/ YAZAR";
   document.getElementById("DOLMETSCHEN_TEXT").innerHTML = languageGerman? 
   "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus." : 
   "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.";
 
-  document.getElementById("WHAT_DO_WE_DO").innerHTML = languageGerman? "Was ich mache" : "Ne yaparim";
+  document.getElementById("WHAT_DO_WE_DO").innerHTML = languageGerman? "Sie suchen einen Schulungsraum zur Miete?" : "Kiralık bir eğitim odası mı arıyorsunuz?";
   document.getElementById("WHAT_DO_WE_DO_TEXT").innerHTML = languageGerman? 
-  "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus." : 
+  "Vermiete sehr geräumigen, gemütlichen, sauberen & hellen Sminarraum / Tagungsraum in Toplage Elsenfeld." : 
   "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.";
 
   // Contact me
-  document.getElementById("CONTACT_ME_INTRO").innerHTML = languageGerman? "Kontaktiere mich" : "Bana ulaşn";
-  /* document.getElementById("CONTACT_ME_TEXT").innerHTML = languageGerman? 
-  "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem." : 
-  "Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem."; */
+  document.getElementById("CONTACT_ME_INTRO").innerHTML = languageGerman? "Kontakt" : "Bana ulaşn";
+  document.getElementById("CONTACT_ME_TEXT").innerHTML = languageGerman? 
+  "Sie können mich gerne per E-mail oder Telefon erreichen.": 
+  "Phasellus convallis elit id ullamcorper pam sem, sit amet impet quis lorem.";
   
   document.getElementById("CONTACT_NAME").innerHTML = languageGerman? "Name" : "İsim";
   document.getElementById("CONTACT_EMAIL").innerHTML = languageGerman? "E-Mail" : "E-posta";
   document.getElementById("CONTACT_MESSAGE").innerHTML = languageGerman? "Nachricht" : "Haberler";
   document.getElementById("ABOUT_ADDRESS").innerHTML = languageGerman? "Adresse" : "Adres";
-  document.getElementById("ABOUT_EMAIL").innerHTML = languageGerman? "E-mail" : "E-posta";
-  document.getElementById("ABOUT_PHONE").innerHTML = languageGerman? "Telefon" : "Telefon";
+/*   document.getElementById("ABOUT_EMAIL").innerHTML = languageGerman? "E-mail" : "E-posta";
+  document.getElementById("ABOUT_PHONE").innerHTML = languageGerman? "Telefon" : "Telefon"; */
 }
+
+function handleImageClick(){
+
+};

@@ -16,16 +16,15 @@
 	  <div class="lang-button">
 		<button onclick="changeLang()" id="LANG_BTN"></button>
 	  </div>
-    <img class="logo" src="images/logo_no_bg.png" alt="logo" data-position="25% 25%"/>
     <!-- Sidebar -->
     <section id="sidebar">
       <div class="inner">
         <nav>
           <ul>
             <li><a href="#intro" id="NAV_WELCOME"></a></li>
-            <li><a href="#one" id="NAV_WHAT_WE_DO">Was wir machen</a></li>
-			      <li><a href="#two" id="NAV_WHO_WE_ARE">Wer sind wir</a></li>
-            <li><a href="#three" id="NAV_CONTACT">Kontaktier mich</a></li>
+            <li><a href="#one" id="NAV_WHAT_WE_DO"></a></li>
+			      <li><a href="#two" id="NAV_WHO_WE_ARE"></a></li>
+            <li><a href="#three" id="NAV_CONTACT"></a></li>
           </ul>
         </nav>
       </div>
@@ -42,8 +41,9 @@
         vertical-align: top;
         padding-top: 100px;
         ">
-          <h1 id="INTRO_TEXT_BIG"></h1>
-          <p id="INTRO_TEXT_SMALL">
+          <!-- <h1 id="INTRO_TEXT_BIG"></h1>
+          <p id="INTRO_TEXT_SMALL"> -->
+            <img class="logo" src="images/logo_no_bg.png" alt="logo"/>
           </p>
           <ul class="actions">
             <li><a href="#one" class="button scrolly" id="MORE_BTN"></a></li>
@@ -57,7 +57,7 @@
       <!-- One -->
       <section id="one" class="wrapper style2 spotlights">
         <section>
-          <a href="#" class="image"
+          <a class="image"
             ><img src="images/pic01.jpg" alt="" data-position="center center"
           /></a>
           <div class="content">
@@ -75,12 +75,15 @@
           </div>
         </section>
         <section>
-          <a href="#" class="image"
+          <a class="image"
             ><img src="images/pic02.jpg" alt="" data-position="top center"
           /></a>
           <div class="content">
             <div class="inner">
-              <h2 id="UEBERSETZUNG">Übersetzung Deutsch/Türkisch</h2>
+              <img
+              class="stamp-img"
+              src="images/stamp.png" alt="" data-position="center center"/>
+              <h2 id="UEBERSETZUNG">Übersetzung / Dolmetschen</h2>
               <p id="UEBERSETZUNG_TEXT">
                 Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam
                 turpis mauris, eu ultricies erat malesuada quis. Aliquam
@@ -93,8 +96,8 @@
           </div>
         </section>
         <section>
-          <a href="#" class="image"
-            ><img src="images/pic03.jpg" alt="" data-position="25% 25%"
+          <a id="myImg" onclick="handleImageClick()" class="image"
+            ><img id="myImg" src="images/pic03.jpg" alt="" data-position="25% 25%"
           /></a>
           <div class="content">
             <div class="inner">
@@ -112,6 +115,34 @@
         </section>
       </section>
 
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+          modal.style.display = "block";
+          /* modalImg.src = this.src; */
+          modalImg.src = "images/pic03.jpg";
+        }
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
+
       <!-- Two -->
       <section id="two" class="wrapper style3 fade-up">
         <div class="inner">
@@ -119,54 +150,82 @@
           <p id="WHAT_DO_WE_DO_TEXT">
           </p>
           <div class="features">
-            <section>
-			  <span class="icon major fa-gem"></span>
-              <h3 id="ABOUT_1">Lorem ipsum amet</h3>
-              <p id="ABOUT_TEXT_1">
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
-            </section>
-            <section>
-              <span class="icon solid major fa-lock"></span>
-              <h3 id="ABOUT_2">Aliquam sed nullam</h3>
-              <p id="ABOUT_TEXT_2">
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
-            </section>
-            <section>
-              <span class="icon solid major fa-cog"></span>
-              <h3 id="ABOUT_3">Sed erat ullam corper</h3>
-              <p id="ABOUT_TEXT_3">
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
-            </section>
-            <section>
-              <span class="icon solid major fa-desktop"></span>
-              <h3 id="ABOUT_4">Veroeros quis lorem</h3>
-              <p id="ABOUT_TEXT_4">
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
-            </section>
-      <!--       <section>
-              <span class="icon solid major fa-link"></span>
-              <h3 id="ABOUT_5">Urna quis bibendum</h3>
-              <p id="ABOUT_TEXT_5">
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
-            </section>
-            <section>
-              <span class="icon solid major fa-code"></span>
-              <h3 id="ABOUT_6">Aliquam urna dapibus</h3>
-              <p id="ABOUT_TEXT_6">
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
-            </section> -->
+
+            <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="images/room1.jpeg" style="width:100%">
+               <!--  <div class="text">Caption Text</div> -->
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="images/room2.jpeg" style="width:100%">
+                <!-- <div class="text">Caption Two</div> -->
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="images/room3.jpeg" style="width:100%">
+                <!-- <div class="text">Caption Three</div> -->
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="images/room4.jpeg" style="width:100%">
+               <!--  <div class="text">Caption Three</div> -->
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="images/room5.jpeg" style="width:100%">
+             <!--    <div class="text">Caption Three</div> -->
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+              
+              </div>
+              <br>
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+              </div>
+              
+              <script>
+              let slideIndex = 1;
+              showSlides(slideIndex);
+              
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+              
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+              
+              function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+              }
+              </script>
+            
           </div>
         </div>
       </section>
@@ -175,11 +234,8 @@
       <section id="three" class="wrapper style1 fade-up">
         <div class="inner">
           <h2 id="CONTACT_ME_INTRO"></h2>
-          <p>
-            Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam
-            turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus,
-            lacus eget hendrerit bibendum, urna est aliquam sem, sit amet
-            imperdiet est velit quis lorem.
+          <p id="CONTACT_ME_TEXT">
+           
           </p>
           <div class="split style1">
             <section>
@@ -203,41 +259,48 @@
                 </ul>
               </form>
             </section>
+
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10292.305979546161!2d9.153846765082987!3d49.84102018896402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1653562337169!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             <section>
               <ul class="contact">
                 <li>
                   <h3 id="ABOUT_ADDRESS">Address</h3>
                   <span
                     >
-                    Am Stachus 2<br />
+                    Am Stachus 2,<br />
                     63820 Elsenfeld<br />
-                    Deutschland</span
+                    3. Obergeschoss<br/>
+                    über dem Cleverfit</span
                   >
                 </li>
-                <li>
+               <!--  <li>
                   <h3 id="ABOUT_EMAIL"></h3>
                   <a href="#">smartlearning-nachhilfe@web.de</a>
-                </li>
+                </li> -->
                 <li>
-                  <h3 id="ABOUT_PHONE"></h3>
-                  <span>0174 / 31 35 2 35</span>
+                  <h3>Inhaberin & Ansprechpartnerin: 
+                  </br>
+                    Frau Rana Ayhan</h3>
+                  <span>smartlearning-nachhilfe@web.de</span>
+                  </br>
+                  <span>0174/ 31 35 2 35</span>
                 </li>
-                <li>
+                <li class="open-h-container">
                   <h3 id="ABOUT_OPEN">Öffnungszeiten:</h3>
-                  <span>Montag: 14:00 - 17:00</span>
-                  <br/>
-                  <span>Dienstag: 14:00 - 17:00</span>
-                  <br/>
-                  <span>Mittwoch: 14:00 - 17:00</span>
-                  <br/>
-                  <span>Donnerstag: 14:00 - 17:00</span>
-                  <br/>
-                  <span>Freitag: 14:00 - 17:00</span>
-                  <hr/>
-                  <h3>Telefonische Sprechzeiten:</h3>
-                  <span>09:00 - 12:00</span>
+                  <p class="open-p-a">Montag:<span>14:00 - 17:00</span></p>
+             
+                  <p class="open-p-b">Dienstag:<span>14:00 - 17:00</span></p>
+               
+                  <p class="open-p-a">Mittwoch:<span>13:30 - 18:00</span></p>
+            
+                  <p class="open-p-b">Donnerstag:<span>15:00 - 16:00</span></p>
+               
+                  <p class="open-p-a">Freitag:<span>13:30 - 15:00</span></p>
+         
+                  <h3 style="padding-top: 20px;">Telefonische Sprechzeiten:</h3>
+                  <p class="open-p-a">Montag-Freitag:<span>09:00 - 12:00</span></p>
                 </li>
-                <li>
+                <li style="padding-top: 10px;">
                   <h3 id="ABOUT_SOCIAL">Social</h3>
                   <ul class="icons">
                     <li>
@@ -283,6 +346,7 @@
         </ul>
       </div>
     </footer>
+    
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -292,6 +356,5 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-	<script src="assets/js/translator.js"></script>
   </body>
 </html>
